@@ -13,25 +13,10 @@ cgitb.enable()
 
 form = cgi.FieldStorage()
 
-# print('Content-Type: application/json')
-# print()
-# print(json.dumps(dict(os.environ), indent = 2))
-
 cookie = []
 if 'HTTP_COOKIE' in os.environ:
     cookie = os.environ['HTTP_COOKIE'].split('; ')
-# print('Content-Type: text/html')
-# print()
-# print("""
-# <!doctype html>
-# <html>
-# <body>
-# """)
-# print(f"<p>{cookie[0] == 'Username=yo'}</p>")
-# print("""
-# </body>
-# </html>
-# """)
+
 if len(cookie) == 2:
     if(cookie[0] == 'Username=yo' and cookie[1] == 'Password=ho'):
         print(secret_page(username, password))
