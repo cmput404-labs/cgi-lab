@@ -3,37 +3,63 @@
 
 import os
 import json
-from templates import login_page
-
-#environmet back as json
-
-print('Content-Type: application/json')
-print()
-print(json.dumps(dict(os.environ), indent = 2))
+from templates import login_page, _wrapper
 
 
-#report value of query parameters
 
-print('Content-Type: text/html')
-print()
-print("""
-<!doctype html>
-<html>
-<body>
-""")
+##Q2: environmet back as json
 
-print(f"<p> QUERY_STRING={os.environ['QUERY_STRING']}</p>")
-print("<ul>")
-for para in os.environ['QUERY_STRING'].split('&'):
-    (name, value) = para.split('=')
-    print(f"<li><em>{name}</em> = {value}</li>")
-
-print("</ul>")
-
-print("""
-</body>
-</html>
-""")
+# print('Content-Type: application/json')
+# print()
+# print(json.dumps(dict(os.environ), indent = 2))
 
 
-#report users browser
+##Q2: report value of query parameters
+
+# print('Content-Type: text/html')
+# print()
+# print("""
+# <!doctype html>
+# <html>
+# <body>
+# <h1>Query</h1>
+# """)
+
+# print("<ul>")
+# for para in os.environ['QUERY_STRING'].split('&'):
+#     (name, value) = para.split('=')
+#     print(f"<li><em>{name}</em> = {value}</li>")
+
+# print("</ul>")
+
+# print("""
+# </body>
+# </html>
+# """)
+
+
+##Q3: report users browser
+
+# print('Content-Type: text/html')
+# print()
+# print("""
+# <!doctype html>
+# <html>
+# <body>
+# <h1>User browser</h1>
+# """)
+
+# print(f"<p> HTTP_USER_AGENT={os.environ['HTTP_USER_AGENT']}</p>")
+
+# print("""
+# </body>
+# </html>
+# """)
+
+##Q4: login page
+print(login_page())
+
+
+
+
+
