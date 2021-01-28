@@ -40,24 +40,22 @@ from templates import login_page, _wrapper
 
 ##Q3: report users browser
 
-# print('Content-Type: text/html')
-# print()
-# print("""
-# <!doctype html>
-# <html>
-# <body>
-# <h1>User browser</h1>
-# """)
+print('Content-Type: text/html')
+print()
+print("""
+<!doctype html>
+<html>
+<body>
+<h1>User browser</h1>
+""")
 
-# print(f"<p> HTTP_USER_AGENT={os.environ['HTTP_USER_AGENT']}</p>")
+print(f"<p> HTTP_USER_AGENT={os.environ['HTTP_USER_AGENT']}</p>")
 
-# print("""
-# </body>
-# </html>
-# """)
+print("""
+</body>
+</html>
+""")
 
-##Q4: login page
-print(login_page())
 
 
 
